@@ -5,6 +5,7 @@
 #include <stack>
 using namespace std;
 
+//This function prints reservation related info!
 void printInfo(Reservation* ptr){
     cout<<"Reservation ID is : "<<ptr->get_ReservationID()<<endl
                         <<"Student ID is : "<<ptr->get_StudentID()<<endl
@@ -22,10 +23,8 @@ int main()
                                             // Reservation mangmemenr works!
                                             //also this is a doubly linked list!
     stack<Reservation*>cancellationStack;
-    /*This is temp stack which will let us iterate over the stack withour loosing the original elements*/
-    stack<Reservation*>tempstack = cancellationStack;
 
-
+    //This is the main loop which runes the whole reservation system!
     while(true)
     {
         int choice = 0;
@@ -41,6 +40,9 @@ int main()
 
         if (choice == 1)
         {
+            //These are the temp data members which will store the info 
+            //that, later will be combined together and stored into the linked list as 
+            // a object
             char validate;
             int ReservationID;
             int StudentID;
@@ -76,8 +78,8 @@ int main()
                                               Name,
                                               ReservationDate);
                 //Here I'm storing pointer address to this object instance to the 
-                //doubly linked list, in linked list it only contains the address\
-                //not the data!
+                //doubly linked list, this linked list is only storing the addressed of the instances
+                //not the actual data!
                 currentReservations.push_back(reserveptr);
                 cout<<"Size right now is "<< currentReservations.size()<<endl;
             }
@@ -99,8 +101,11 @@ int main()
             cin>>cancel;
 
             if(cancel == 'y'){
+                //Here we are cancelling the reservation and printing the cancelled person's name!
                 cout<<"Cancelling reservation for : "<<currentReservations.back()->get_Name()<<endl;
+                //Here adding the canceled person into the cancellation stack!
                 cancellationStack.push(currentReservations.back());
+                //Here removing the very last person from the linked list
                 currentReservations.pop_back();
             }
             else{
@@ -116,9 +121,12 @@ int main()
                 cout<<"Cancellation stack is empty right now!"<<endl;
             }
             if(cancel == 'y'){
+                //adding the top value of the stack to the back of the linked list
                 currentReservations.push_back(cancellationStack.top());
                 cout<<"Success Student : "<<currentReservations.back()->get_Name()<<endl;
+                //Popping the top!
                 cancellationStack.pop();
+
             }
             else{
                 cout<<"Try again"<<endl;
@@ -128,6 +136,9 @@ int main()
         }
         if(choice == 5){
             cout<<"Displaying Cancellation history!"<<endl;
+             /*This is temp stack which will let us iterate over the stack withour loosing the original elements*/
+            stack<Reservation*>tempstack = cancellationStack;
+            //Here im copying the cancellationstack data to tempstack
             tempstack = cancellationStack;
             if(tempstack.empty()){
                 cout<<"Cancellation list is currently empty!"<<endl;
@@ -135,7 +146,9 @@ int main()
             }
             
             while(!tempstack.empty()){
+                //This is the loop that will print the whole cancellation stack
                 Reservation* ptr = tempstack.top();
+                //printing the each reservation here while iterating the loop
                 printInfo(ptr);
                 tempstack.pop();
             }
