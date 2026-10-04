@@ -1,2 +1,6 @@
 # Project 1: Campus Resource Reservation System (CSCE 2110)
-Campus Resource Reservation System Universities manage a variety of resources every day, including study rooms, tutoring appointments, laptops, calculators, and laboratory equipment. Students frequently request access to these resources, and administrators must efficiently manage reservations, waiting lists, cancellations, and usage reports.
+Universities manage a variety of resources every day, including study rooms, tutoring appointments, laptops, calculators, and laboratory equipment. Students frequently request access to these resources, and administrators must efficiently manage reservations, waiting lists, cancellations, and usage reports.
+
+In this project, our team developed a Campus Resource Reservation System that allows users to reserve campus resources, manage waiting lists, track reservation history, and generate reports.
+
+The goal of this project is to apply object-oriented programming and fundamental data structures to solve a realistic problem.
