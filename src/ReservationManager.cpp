@@ -145,6 +145,14 @@ void ReservationManager::createReservation()
     cout << "Reservation Date (mm/dd/yyyy): ";
     getline(cin, ReservationDate);
 
+	Resource *rsc = doesResourceExistByID(ResourceID);
+    if (rsc == nullptr)
+    {
+    	cout << "Resource with such \"Resource ID\" does not exist. You are not able to create it." << endl;
+    	cout << endl;
+    	return;
+    }
+
     Reservation *reservationPTR = doesReservationIDExists(ReservationID);
 
     if (reservationPTR != nullptr) // prevents duplicate Reservation ID
