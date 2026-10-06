@@ -5,6 +5,11 @@ In this project, our team developed a Campus Resource Reservation System that al
 
 The goal of this project is to apply object-oriented programming and fundamental data structures to solve a realistic problem.
 
+** Features**
+
+1. View Resources - Displays all resources in the system, and shows the resource ID, name type and availability status
+2. Creates reservations - Allows the student 
+
 To Compile It Write:
 1) make
 2) ./project1Milestone.exe
