@@ -32,19 +32,36 @@ class ReservationManager
 		void searchReservations();
 		void sortResources(); // sorts resources by Name using Quick Sort algorithm
 		void generateReport();
-		void assignNextWaitingReservation(string ResourceID); // this declares a function that finds the next student waiting for a resource and assigns it to them
+		void viewCancellationHistory();
+		void changeResourceAvailability();
+		void viewCurrentReservations();
 
 		// additional methods/functions
 		Resource* doesResourceExistByID(string ResourceID);
-		Reservation* doesReservationIDExists(int ReservationID);
+		Reservation* doesReservationExistsByReservationID(string ReservationID);
+		Reservation* doesReservationExistsByStudentID(string StudentID);
+		Reservation* doesReservationExistsByReservationDate(string ReservationDate);
+		Reservation* doesReservationExistsByResourceID(string ResourceID);
 
 		// Quick Sort Methods
 		int partition(vector<Resource> &arr, int low, int high);
 		void quickSort(vector<Resource> &arr, int low, int high);
 
 		// Resource Utilization
-		int getNumberOfReservations(string ResourceID);
+		int getNumberOfActiveReservations(string ResourceID);
 		int getNumberOfStudentsWaitingResource(string ResourceID);
+
+		void availabilityManager(); // reserves "Available" resources for reservations from waiting queue
+
+		// validation
+		bool isChoiceCorrect(string input);
+		bool isResourceIDValid(string ResourceID);
+		bool isDateValid(string date);
+		bool isStudentIDValid(string StudentID);
+		bool isReservationIDValid(string ReservationID);
+		bool isNameValid(string Name);
+
+		vector<int> isLeapYearOrNormal(int year);
 };
 
 #endif
