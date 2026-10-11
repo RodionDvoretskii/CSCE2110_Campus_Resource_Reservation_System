@@ -32,6 +32,7 @@ class ReservationManager
 		void searchReservations();
 		void sortResources(); // sorts resources by Name using Quick Sort algorithm
 		void generateReport();
+		void assignNextWaitingReservation(string ResourceID); // this declares a function that finds the next student waiting for a resource and assigns it to them
 
 		// additional methods/functions
 		Resource* doesResourceExistByID(string ResourceID);
