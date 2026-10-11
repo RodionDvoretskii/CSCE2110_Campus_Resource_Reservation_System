@@ -1,11 +1,11 @@
-# Project 1: Campus Resource Reservation System (CSCE 2110)
+# Project 1: Campus Resource Reservation System (CSCE 2110) 📝
 Universities manage a variety of resources every day, including study rooms, tutoring appointments, laptops, calculators, and laboratory equipment. Students frequently request access to these resources, and administrators must efficiently manage reservations, waiting lists, cancellations, and usage reports.
 
 In this project, our team developed a Campus Resource Reservation System that allows users to reserve campus resources, manage waiting lists, track reservation history, and generate reports.
 
 This project aims to apply object-oriented programming and fundamental data structures to solve a real-world problem.
 
-**Features**
+**Features** ⚙️
 
 1. View Resources - Displays all resources in the system and shows the resource ID, name, type, and availability status
 
@@ -23,7 +23,7 @@ This project aims to apply object-oriented programming and fundamental data stru
 
 8. Generate Reports - Displays active reservations and resource utilization information, shows the number of reservations for each resource and the number of students waiting for each resource. It also displays the two most requested resources.
 
-**Data Structures Used**
+**Data Structures Used** 🛠️
 
 1. Vector
 2. Linked List
@@ -32,21 +32,21 @@ This project aims to apply object-oriented programming and fundamental data stru
 
 **Files**
 
-data-
-  reservations.txt
-  resources.txt
-include- 
-  Reservation.h
-  ReservationManager.h
-  Resource.h
-src-
-  Main.cpp
-  Reservation.cpp
-  ReservationManager.cpp
-  Resource.cpp
+📂 data:
+    🗋 reservations.txt
+    🗋 resources.txt
+📂 include: 
+    Reservation.h
+    ReservationManager.h
+    Resource.h
+📂 src:
+    Main.cpp
+    Reservation.cpp
+    ReservationManager.cpp
+    Resource.cpp
 Makefile
 README.md
 
-To Compile It Write:
+💻 To Compile It Write:
 1) make
 2) ./project1Milestone.exe
