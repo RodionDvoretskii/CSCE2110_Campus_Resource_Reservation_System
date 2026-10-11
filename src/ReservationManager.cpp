@@ -271,65 +271,6 @@ void ReservationManager::createReservation()
     	cout << "Added to Current Reservations." << endl;
     	cout << endl;
     }
-
-    // Reservation *r = doesReservationExistsByResourceID(ResourceID);
-    // if (rsc->getAvailabilityStatus() == "Available")
-    // {
-    // 	if (r != nullptr)
-    // 	{
-    // 		if (r->getReservationDate() == ReservationDate)///////////////////////////////////////////////////////////////////////////////////////
-    // 		{
-    // 			waitingQueue.push(reservation);
-	// 	    	cout << "Reservation Created Successfully." << endl;
-	// 	    	cout << "Added to Waiting List." << endl;
-    // 			cout << endl;
-    // 		}
-    // 		else
-    // 		{
-    // 			// inserts reservation into linked-list "currentReservations"
-	// 	    	currentReservations.push_back(reservation);
-	// 	    	cout << "Reservation Created Successfully." << endl;
-	// 	    	cout << "Added to Current Reservations." << endl;
-	// 	    	cout << endl;
-    // 		}
-    // 	}
-    // 	else
-    // 	{
-    // 		// inserts reservation into linked-list "currentReservations"
-	//     	currentReservations.push_back(reservation);
-	//     	cout << "Reservation Created Successfully." << endl;
-	//     	cout << "Added to Current Reservations." << endl;
-	//     	cout << endl;
-    // 	}
-    // }
-
-    // Reservation *Date = doesReservationExistsByReservationDate(ReservationDate);
-    // if (Date != nullptr) // prevents duplicate Reservation Date
-    // {
-    // 	cout << "No duplicates: Reservation with such Date already exists." << endl;
-    // 	cout << endl;
-    // 	return;
-    // }
-
-    // // creates a reservation (object)
-    // Reservation reservation(ReservationID, StudentID, Name, ResourceID, ReservationDate);
-
-    // if (rsc->getAvailabilityStatus() == "Available")
-    // {
-    // 	// inserts reservation into linked-list "currentReservations"
-    // 	currentReservations.push_back(reservation);
-    // 	rsc->setAvailabilityStatus("Unavailable");
-    // 	cout << "Reservation Created Successfully." << endl;
-    // 	cout << "Added to Current Reservations." << endl;
-    // 	cout << endl;
-    // }
-    // else
-    // {
-    // 	waitingQueue.push(reservation);
-    // 	cout << "Reservation Created Successfully." << endl;
-    // 	cout << "Added to Waiting List." << endl;
-    // 	cout << endl;
-    // }
 }
 
 void ReservationManager::cancelReservation() // cencels reservation - removes it from currentReservations list and stores into cancellationStack
