@@ -3,7 +3,7 @@
 // default constructor
 Reservation::Reservation()
 {
-    ReservationID = 0;
+    ReservationID = "";
     StudentID = "";
     Name = "";
     ResourceID = "";
@@ -12,7 +12,7 @@ Reservation::Reservation()
 
 
 // parameterized constructor
-Reservation::Reservation(int ReservationID, string StudentID, string Name, string ResourceID, string ReservationDate)
+Reservation::Reservation(string ReservationID, string StudentID, string Name, string ResourceID, string ReservationDate)
 {
     this->ReservationID = ReservationID;
     this->StudentID = StudentID;
@@ -23,7 +23,7 @@ Reservation::Reservation(int ReservationID, string StudentID, string Name, strin
 
 
 // getters
-int Reservation::getReservationID() const
+string Reservation::getReservationID() const
 {
     return ReservationID;
 }
@@ -50,7 +50,7 @@ string Reservation::getReservationDate() const
 
 
 // setters
-void Reservation::setReservationID(int ReservationID)
+void Reservation::setReservationID(string ReservationID)
 {
     this->ReservationID = ReservationID;
 }
