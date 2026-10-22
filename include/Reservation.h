@@ -8,7 +8,7 @@ class Reservation
 {
     private:
         // attributes
-        int ReservationID;
+        string ReservationID;
         string StudentID;
         string Name;
         string ResourceID;
@@ -19,17 +19,17 @@ class Reservation
         Reservation();
 
         // parameterized constructor
-        Reservation(int ReservationID, string StudentID, string Name, string ResourceID, string ReservationDate);
+        Reservation(string ReservationID, string StudentID, string Name, string ResourceID, string ReservationDate);
 
         // getters
-        int getReservationID() const;
+        string getReservationID() const;
         string getStudentID() const;
         string getName() const;
         string getResourceID() const;
         string getReservationDate() const;
 
         // setters
-        void setReservationID(int ReservationID);
+        void setReservationID(string ReservationID);
         void setStudentID(string StudentID);
         void setName(string Name);
         void setResourceID(string ResourceID);
